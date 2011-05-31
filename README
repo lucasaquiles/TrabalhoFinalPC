@@ -1,0 +1,3 @@
+não esqueça de ver as configurações do hibernate-cfg.xml antes de rodar o projeto.
+	
+	- verifique se as configurações de acesso a o banco de dados estão corretos (host, nome do banco, usuario, senha)
