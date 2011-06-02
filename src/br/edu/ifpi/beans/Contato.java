@@ -6,6 +6,8 @@
 package br.edu.ifpi.beans;
 
 import java.util.GregorianCalendar;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,14 +29,22 @@ public class Contato {
 //    private String urlImagem;
     private GregorianCalendar dataNascimento;
     private String telefone;
-
-
-   
-
+    
     @ManyToOne(cascade=CascadeType.ALL)
     private Endereco endereco;
-    @ManyToOne
-    private Grupo grupo;
+    @OneToMany
+    
+    private Set<Grupo>grupos = new HashSet<Grupo>();
+
+    public Set<Grupo> getGrupos() {
+        return grupos;
+    }
+
+    public void setGrupos(Set<Grupo> grupos) {
+        this.grupos = grupos;
+    }
+
+    
 
     public GregorianCalendar getDataNascimento() {
         return dataNascimento;
@@ -60,13 +70,7 @@ public class Contato {
         this.endereco = endereco;
     }
 
-    public Grupo getGrupo() {
-        return grupo;
-    }
-
-    public void setGrupo(Grupo grupo) {
-        this.grupo = grupo;
-    }
+   
 
     public long getId() {
         return id;

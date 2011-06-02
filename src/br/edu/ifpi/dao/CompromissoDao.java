@@ -6,7 +6,10 @@
 package br.edu.ifpi.dao;
 
 import br.edu.ifpi.beans.Compromisso;
+import br.edu.ifpi.beans.Usuario;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 import org.hibernate.Session;
 
 /**
@@ -22,7 +25,14 @@ public class CompromissoDao implements Dao<Compromisso>{
 
  
     public void save(Compromisso object) {
-        throw new UnsupportedOperationException("Not supported yet.");
+
+        
+
+        // verificar se o usuário está com horário disponível para aquela reunião
+
+        session.beginTransaction();
+        session.save(object);
+        session.getTransaction().commit();
     }
 
     public void update(Compromisso object) {

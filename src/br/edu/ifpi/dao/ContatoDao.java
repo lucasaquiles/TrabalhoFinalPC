@@ -21,10 +21,11 @@ public class ContatoDao implements Dao<Contato>{
         this.session = session;
     }
 
-
-
     public void save(Contato object) {
-        throw new UnsupportedOperationException("Not supported yet.");
+
+        session.beginTransaction();
+        session.save(object);
+        session.getTransaction().commit();
     }
 
     public void update(Contato object) {
