@@ -23,6 +23,7 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Compromisso {
+    
     @Id @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
 
@@ -32,7 +33,7 @@ public class Compromisso {
     private GregorianCalendar dataInicio;    
     private GregorianCalendar dataFim;
 
-    @OneToMany
+    @OneToMany(mappedBy="id")
     private Set<Usuario> participantes = new HashSet<Usuario>();
 
     public Set<Usuario> getParticipantes() {
@@ -43,7 +44,7 @@ public class Compromisso {
         this.participantes = participantes;
     }
  
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     private Categoria categoria;
 
     public Categoria getCategoria() {
@@ -92,6 +93,12 @@ public class Compromisso {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    @Override
+    public String toString() {
+
+        return getTitulo();
     }
 
     

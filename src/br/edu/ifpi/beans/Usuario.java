@@ -2,22 +2,16 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.edu.ifpi.beans;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import org.hibernate.annotations.Cascade;
 
 /**
  *
@@ -26,16 +20,17 @@ import org.hibernate.annotations.Cascade;
 @Entity
 public class Usuario {
 
-    @Id @GeneratedValue(strategy=GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String username;
     private String password;
     private boolean status;
-
-    @OneToMany
+//    @ManyToOne
+//    private AccountDecorator accountDecorator;
+    @OneToMany //(mappedBy="id")
     private Set<Contato> contatos = new HashSet<Contato>();
-    
-    @OneToMany
+    @OneToMany //(mappedBy="id")
     private Set<Compromisso> compromissos = new HashSet<Compromisso>();
 
     public Set<Compromisso> getCompromissos() {
@@ -53,8 +48,6 @@ public class Usuario {
     public void setContatos(Set<Contato> contatos) {
         this.contatos = contatos;
     }
-
-  
 
     public long getId() {
         return id;
@@ -88,7 +81,10 @@ public class Usuario {
         this.username = username;
     }
 
-    
+    @Override
+    public String toString() {
+        return getUsername();
+    }
 }
 
 

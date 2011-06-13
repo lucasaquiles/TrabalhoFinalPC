@@ -1,0 +1,27 @@
+<list>
+  <br.edu.ifpi.beans.Compromisso>
+    <id>44</id>
+    <titulo>teste adicionando</titulo>
+    <descricao>teeeeeeste</descricao>
+    <dataInicio>
+      <time>-61806488400000</time>
+      <timezone>America/Sao_Paulo</timezone>
+    </dataInicio>
+    <dataFim>
+      <time>-61806488400000</time>
+      <timezone>America/Sao_Paulo</timezone>
+    </dataFim>
+    <participantes class="org.hibernate.collection.PersistentSet">
+      <initialized>false</initialized>
+      <owner class="br.edu.ifpi.beans.Compromisso" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>br.edu.ifpi.beans.Compromisso.participantes</role>
+      <key class="long">44</key>
+      <dirty>false</dirty>
+    </participantes>
+    <categoria>
+      <id>5</id>
+      <nome>opa</nome>
+    </categoria>
+  </br.edu.ifpi.beans.Compromisso>
+</list>

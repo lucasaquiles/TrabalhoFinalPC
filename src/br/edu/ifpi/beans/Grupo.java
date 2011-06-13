@@ -17,6 +17,7 @@ import javax.persistence.Id;
 public class Grupo {
 
     @Id @GeneratedValue
+    
     private long id;
     private String nome;
 
@@ -36,5 +37,8 @@ public class Grupo {
         this.nome = nome;
     }
 
-    
+    @Override
+    public String toString() {
+        return getNome();
+    }    
 }

@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.edu.ifpi.beans;
 
 import java.util.GregorianCalendar;
@@ -12,6 +11,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -22,19 +22,22 @@ import javax.persistence.OneToMany;
 @Entity
 public class Contato {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private long id;
     private String nome;
     private String email;
-//    private String urlImagem;
+    //private String urlImagem;
+
     private GregorianCalendar dataNascimento;
     private String telefone;
-    
-    @ManyToOne(cascade=CascadeType.ALL)
+
+    @ManyToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
-    @OneToMany
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="id")
     
-    private Set<Grupo>grupos = new HashSet<Grupo>();
+    private Set<Grupo> grupos = new HashSet<Grupo>();
 
     public Set<Grupo> getGrupos() {
         return grupos;
@@ -43,8 +46,6 @@ public class Contato {
     public void setGrupos(Set<Grupo> grupos) {
         this.grupos = grupos;
     }
-
-    
 
     public GregorianCalendar getDataNascimento() {
         return dataNascimento;
@@ -70,8 +71,6 @@ public class Contato {
         this.endereco = endereco;
     }
 
-   
-
     public long getId() {
         return id;
     }
@@ -96,6 +95,8 @@ public class Contato {
         this.telefone = telefone;
     }
 
-    
-
+    @Override
+    public String toString() {
+        return getNome();
+    }
 }

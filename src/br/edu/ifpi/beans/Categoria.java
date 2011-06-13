@@ -16,7 +16,9 @@ import javax.persistence.Id;
  */
 @Entity
 public class Categoria {
+    
     @Id @GeneratedValue(strategy=GenerationType.AUTO)
+
     private long id;
     private String nome;
 
@@ -34,6 +36,12 @@ public class Categoria {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+
+        return getNome();
     }
 
     

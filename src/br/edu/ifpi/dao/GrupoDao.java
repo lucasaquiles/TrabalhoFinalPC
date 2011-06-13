@@ -7,7 +7,11 @@ package br.edu.ifpi.dao;
 
 import br.edu.ifpi.beans.Grupo;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.hibernate.Session;
+import org.hibernate.criterion.Order;
 
 /**
  *
@@ -23,19 +27,57 @@ public class GrupoDao implements Dao<Grupo>{
     }
 
     public void save(Grupo object) {
-        throw new UnsupportedOperationException("Not supported yet.");
+
+        session.beginTransaction();
+        session.save(object);
+        session.getTransaction().commit();
     }
 
     public void update(Grupo object) {
-        throw new UnsupportedOperationException("Not supported yet.");
+       session.beginTransaction();
+        session.merge(object);
+        session.getTransaction().commit();
     }
 
+    public Grupo getById(long id){
+
+        Grupo g = null;
+
+        g = (Grupo) session.load(Grupo.class, id);
+
+        return g;
+    }
+
+
     public void remove(long id) {
-        throw new UnsupportedOperationException("Not supported yet.");
+
+        Grupo g = (Grupo) session.load(Grupo.class, id);
+
+        try{
+
+            session.beginTransaction();
+            session.delete(g);
+            session.getTransaction().commit();
+            
+        }catch(Exception e){
+            try {
+                
+                throw new Exception("usuário não existe para id: " + id);
+
+            } catch (Exception ex) {
+
+                Logger.getLogger(GrupoDao.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 
     public ArrayList<Grupo> list() {
-        throw new UnsupportedOperationException("Not supported yet.");
+
+       ArrayList<Grupo> grupos = null;
+
+        grupos = (ArrayList<Grupo>) session.createCriteria(Grupo.class).addOrder(Order.asc("nome")).list();
+
+        return grupos;
     }
 
 }

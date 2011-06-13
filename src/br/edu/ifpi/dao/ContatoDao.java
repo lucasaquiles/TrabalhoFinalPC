@@ -8,6 +8,7 @@ package br.edu.ifpi.dao;
 import br.edu.ifpi.beans.Contato;
 import java.util.ArrayList;
 import org.hibernate.Session;
+import org.hibernate.criterion.Order;
 
 /**
  *
@@ -21,15 +22,33 @@ public class ContatoDao implements Dao<Contato>{
         this.session = session;
     }
 
+    public Contato getById(long id){
+
+        Contato c = null;
+
+        try{
+
+            c = (Contato) session.load(Contato.class, id);
+        }catch(Exception e){
+
+        }
+
+        return c;
+    }
     public void save(Contato object) {
 
         session.beginTransaction();
         session.save(object);
+        session.flush();
         session.getTransaction().commit();
+        
     }
 
     public void update(Contato object) {
-        throw new UnsupportedOperationException("Not supported yet.");
+         session.beginTransaction();
+        session.merge(object);
+        //session.flush();
+        session.getTransaction().commit();
     }
 
     public void remove(long id) {
@@ -37,7 +56,13 @@ public class ContatoDao implements Dao<Contato>{
     }
 
     public ArrayList<Contato> list() {
-        throw new UnsupportedOperationException("Not supported yet.");
+
+
+        ArrayList<Contato> contatos = null;
+
+        contatos = (ArrayList<Contato>) session.createCriteria(Contato.class).addOrder(Order.asc("nome")).list();
+
+        return contatos;
     }
 
 }

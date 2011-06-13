@@ -1,0 +1,145 @@
+<list>
+  <br.edu.ifpi.beans.Contato>
+    <id>16</id>
+    <nome>mais um</nome>
+    <email></email>
+    <telefone></telefone>
+    <endereco>
+      <id>13</id>
+      <nome></nome>
+      <cep></cep>
+      <numero>134</numero>
+      <complemento></complemento>
+    </endereco>
+    <grupos class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="br.edu.ifpi.beans.Contato" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>br.edu.ifpi.beans.Contato.grupos</role>
+      <key class="long">16</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map"/>
+      <set/>
+    </grupos>
+  </br.edu.ifpi.beans.Contato>
+  <br.edu.ifpi.beans.Contato>
+    <id>15</id>
+    <nome>contato mock</nome>
+    <grupos class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="br.edu.ifpi.beans.Contato" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>br.edu.ifpi.beans.Contato.grupos</role>
+      <key class="long">15</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map"/>
+      <set/>
+    </grupos>
+  </br.edu.ifpi.beans.Contato>
+  <br.edu.ifpi.beans.Contato>
+    <id>17</id>
+    <nome>Usuario de teste</nome>
+    <email>emaildetete@email.com</email>
+    <telefone>134341</telefone>
+    <endereco>
+      <id>14</id>
+      <nome>Teste</nome>
+      <cep>1341234</cep>
+      <numero>1342</numero>
+      <complemento>jdkçfjadçkrfa</complemento>
+    </endereco>
+    <grupos class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="br.edu.ifpi.beans.Contato" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>br.edu.ifpi.beans.Contato.grupos</role>
+      <key class="long">17</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map"/>
+      <set/>
+    </grupos>
+  </br.edu.ifpi.beans.Contato>
+  <br.edu.ifpi.beans.Contato>
+    <id>18</id>
+    <nome>teste</nome>
+    <email>outro@email.com</email>
+    <telefone></telefone>
+    <endereco>
+      <id>15</id>
+      <nome></nome>
+      <cep></cep>
+      <numero>1234</numero>
+      <complemento></complemento>
+    </endereco>
+    <grupos class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="br.edu.ifpi.beans.Contato" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>br.edu.ifpi.beans.Contato.grupos</role>
+      <key class="long">18</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map"/>
+      <set/>
+    </grupos>
+  </br.edu.ifpi.beans.Contato>
+  <br.edu.ifpi.beans.Contato>
+    <id>24</id>
+    <nome>outro teste</nome>
+    <email></email>
+    <telefone></telefone>
+    <endereco>
+      <id>20</id>
+      <nome></nome>
+      <cep></cep>
+      <numero>0</numero>
+      <complemento></complemento>
+    </endereco>
+    <grupos class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="br.edu.ifpi.beans.Contato" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>br.edu.ifpi.beans.Contato.grupos</role>
+      <key class="long">24</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map"/>
+      <set/>
+    </grupos>
+  </br.edu.ifpi.beans.Contato>
+  <br.edu.ifpi.beans.Contato>
+    <id>23</id>
+    <nome>eeeeeeeeeeeeeeeeeeeee</nome>
+    <email></email>
+    <telefone></telefone>
+    <endereco>
+      <id>19</id>
+      <nome></nome>
+      <cep></cep>
+      <numero>0</numero>
+      <complemento></complemento>
+    </endereco>
+    <grupos class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="br.edu.ifpi.beans.Contato" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>br.edu.ifpi.beans.Contato.grupos</role>
+      <key class="long">23</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map"/>
+      <set/>
+    </grupos>
+  </br.edu.ifpi.beans.Contato>
+  <br.edu.ifpi.beans.Contato>
+    <id>19</id>
+    <nome>contato mock</nome>
+    <grupos class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="br.edu.ifpi.beans.Contato" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>br.edu.ifpi.beans.Contato.grupos</role>
+      <key class="long">19</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map"/>
+      <set/>
+    </grupos>
+  </br.edu.ifpi.beans.Contato>
+</list>

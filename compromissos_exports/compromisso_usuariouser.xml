@@ -1,0 +1,58 @@
+<list>
+  <br.edu.ifpi.beans.Compromisso>
+    <id>38</id>
+    <titulo></titulo>
+    <descricao></descricao>
+    <participantes class="org.hibernate.collection.PersistentSet">
+      <initialized>false</initialized>
+      <owner class="br.edu.ifpi.beans.Compromisso" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>br.edu.ifpi.beans.Compromisso.participantes</role>
+      <key class="long">38</key>
+      <dirty>false</dirty>
+    </participantes>
+    <categoria>
+      <id>1</id>
+      <nome>aula</nome>
+    </categoria>
+  </br.edu.ifpi.beans.Compromisso>
+  <br.edu.ifpi.beans.Compromisso>
+    <id>35</id>
+    <titulo></titulo>
+    <descricao></descricao>
+    <participantes class="org.hibernate.collection.PersistentSet">
+      <initialized>false</initialized>
+      <owner class="br.edu.ifpi.beans.Compromisso" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>br.edu.ifpi.beans.Compromisso.participantes</role>
+      <key class="long">35</key>
+      <dirty>false</dirty>
+    </participantes>
+    <categoria reference="../../br.edu.ifpi.beans.Compromisso/categoria"/>
+  </br.edu.ifpi.beans.Compromisso>
+  <br.edu.ifpi.beans.Compromisso>
+    <id>37</id>
+    <titulo>OOOOOpa</titulo>
+    <descricao>teste com datas</descricao>
+    <dataInicio>
+      <time>-61759746000000</time>
+      <timezone>America/Sao_Paulo</timezone>
+    </dataInicio>
+    <dataFim>
+      <time>-61759746000000</time>
+      <timezone>America/Sao_Paulo</timezone>
+    </dataFim>
+    <participantes class="org.hibernate.collection.PersistentSet">
+      <initialized>false</initialized>
+      <owner class="br.edu.ifpi.beans.Compromisso" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>br.edu.ifpi.beans.Compromisso.participantes</role>
+      <key class="long">37</key>
+      <dirty>false</dirty>
+    </participantes>
+    <categoria>
+      <id>4</id>
+      <nome>trollagem</nome>
+    </categoria>
+  </br.edu.ifpi.beans.Compromisso>
+</list>

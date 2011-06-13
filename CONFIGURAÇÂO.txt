@@ -1,0 +1,8 @@
+-------------------------- CONFIGURAÇÂO
+
+adicionar a lib do xstream.jar, quartz.jar e o jar do mysql no path do projeto ( localizadas na raiz do projeto )
+configurar o hibernate-cfg.xml alterando o nome de usuário, senha e nome do banco, caso necessário
+
+A classe pacote br.edu.ifpi.database.CreateSchema cria todo esquema de tabelas
+
+existe um script na raiz do projeto _script_db.sql que cria o banco de dados e todo o esquema de tabelas e popula as tabelas com alguns valores

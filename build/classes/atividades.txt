@@ -1,0 +1,14 @@
+criar as views
+
+    - cada view deve ter os mesmos campos das classes e uma label extra pra exibir mensagens de alertas, erros, confirmação
+
+    - principal com os menus (contato (criar, listar), compromissos(criar, listar)
+    - view pra criar contato, view pra listar contatos
+    - button para importar/exportar contatos, compromissos
+    - view pra criar categoria, view pra listar categorias
+    - view pra criar compromisso, view pra listar compromissos
+    - views para cirar grupo, view pra listar grupos
+    - view para autenticar o usuário
+
+
+
